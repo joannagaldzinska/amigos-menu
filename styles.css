@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: 'open sans', sans-serif;
+  background-color: #aca07a;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/*HEADER*/
+
+header {
+  grid-area: header;
+}
+
+header h1 {
+  font-size: 4em;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px black;
+}
+
+/*NAV*/
+
+nav {
+  grid-area: nav;
+  margin: 0 auto;
+}
+
+.options {
+  width: 97%;
+  background-color: white;
+  padding: 10px;
+  border-top: 3px solid black;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.options-link {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: black;
+}
+
+.options-link:hover {
+  color: darkgreen;
+  text-decoration: underline;
+}
+
+.card {
+  background-color: white;
+}
+
+.card-blue {
+  background-color: white;
+}
+
+.card-title {
+  color: white;
+  background-color: #4d5155;
+  font-size: 1.25em;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#ca {
+  grid-area: ca;
+}
+
+#ha {
+  grid-area: ha;
+}
+
+#soups {
+  grid-area: soups;
+}
+
+#salats {
+  grid-area: salats;
+}
+
+#gm {
+  grid-area: gm;
+}
+
+#burgers {
+  grid-area: burgers;
+}
+
+input {
+  width: 85%;
+  color: darkblue;
+  background-color: aliceblue;
+  font-size: 1.25em;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-img {
+  max-width: 100%;
+  border-radius: 50%;
+  width: 50%;
+  margin-bottom: 5px;
+  border: 6px solid #4f97d5;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+  grid-area: footer;
+  margin: 20px 0;
+  text-align: center;
+}
+
+div {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@media screen and (min-width: 1100px) {
+  main {
+    width: 90%;
+    max-width: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 4vh auto auto 10vh;
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+
+  #container {
+    grid-template-areas:
+      'header header header'
+      'nav nav nav'
+      'ca ha soups'
+      'salats gm burgers'
+      'footer footer footer';
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  main {
+    width: 90%;
+    max-width: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 5vh auto auto auto 15vh;
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+
+  #container {
+    grid-template-areas:
+      'header header'
+      'nav nav'
+      'ca ha'
+      'soups salats'
+      'gm burgers'
+      'footer footer';
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  section {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  profile {
+    width: 20%;
+  }
+
+  .graphs {
+    font-size: 90px;
+    margin: 3% 0 0;
+  }
+  div {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    width: 90%;
+    max-width: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto 20vh;
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+
+  #container {
+    grid-template-areas:
+      'header'
+      'nav'
+      'ca'
+      'ha'
+      'soups'
+      'salats'
+      'gm'
+      'burgers'
+      'footer';
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  header h1 {
+    font-size: 1.75em;
+    padding-top: 25px;
+  }
+
+  nav {
+    margin-top: 0;
+  }
+
+  .options {
+    font-size: 12px;
+  }
+
+  footer {
+    margin-bottom: 100px;
+  }
+
+  div {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
